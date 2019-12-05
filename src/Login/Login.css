@@ -1,0 +1,31 @@
+
+form {
+    padding: 10%;
+    padding-top: 15%;
+}
+
+#login-wrapper {
+    margin-top: 10vh;
+    height: 60vh;
+}
+
+#email, #password {
+    margin-top: 10%;
+    width: 80%;
+    display: block;
+}
+
+#login,#signup {
+    margin: 2.5%;
+    margin-top: 10%;
+    width: 30%;
+    font-size: large;
+}
+
+#login {
+    background-color: cornflowerblue;
+}
+
+#signup {
+    background-color: darkseagreen;
+}

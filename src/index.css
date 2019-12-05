@@ -1,13 +1,48 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap');
+
+* {
+  text-align: center;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+} 
+
+body {
+  background-image: url('./img/gradation.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Sulphur Point', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+input {
+  font-family: 'Sulphur Point', sans-serif;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.wrapper {
+  padding: 2%;
+  width: 30vw;
+  background-color: #fafafa;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+button {
+  font-family: 'Sulphur Point', sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: #fafafa;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+  background-color: rgb(255, 255, 255, 0.5);
+  padding-left: 5%;
 }

@@ -1,0 +1,17 @@
+#pomodoro-wrapper {
+    margin-top: 2.5%;
+    height: 70vh;
+}
+
+#signout {
+    margin-right:30%;
+    background-color: darkseagreen;
+    opacity: 1;
+}
+
+#todo-wrapper {
+    padding-left: 10%;
+    padding-top: 5%;
+    height: 80%;
+    overflow-y: auto;
+}

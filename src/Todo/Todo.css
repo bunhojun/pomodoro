@@ -1,0 +1,24 @@
+.todo {
+    text-align: left;
+    width: 85%;
+    font-size: 20px;
+    margin: 5px;
+    border-bottom: gray 1px solid;
+    list-style: none;
+    word-break : break-all;
+}
+
+.delete {
+    opacity: 0;
+    float: right;
+    color: red;
+    cursor: pointer;
+}
+
+.delete:hover {
+    opacity: 1;
+}
+
+.link {
+    cursor: pointer;
+}

@@ -1,0 +1,9 @@
+#pomodoro-input {
+    width: 60%;
+}
+
+#add-task {
+    font-size: large;
+    margin-left: 2.5%;
+    background-color: coral;
+}

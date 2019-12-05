@@ -1,0 +1,35 @@
+#start {
+    margin-top: 5%;
+    font-size: large;
+}
+
+#content {
+    margin-top: 5%;
+    font-size: large;
+}
+
+#send-zone {
+    margin-top: 5%;
+}
+
+#send-zone button {
+    width: 20%;
+    font-size: large;
+    margin: 2.5%;
+}
+
+#done-btn {
+    background-color: tomato;
+}
+
+#not-yet-btn {
+    background-color: cadetblue;
+}
+
+#select-zone {
+    margin: 2.5%;
+}
+
+#timer-zone {
+    margin: 2.5%;
+}
