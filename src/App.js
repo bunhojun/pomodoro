@@ -35,8 +35,16 @@ export class App extends Component {
   }
 
   //メール送信
-  notify = () => {
-    
+  notify = (content) => {
+    fire.firestore().collection('mails').add({
+      to: this.state.user.email,
+      message: {
+        subject: 'pomodoro notification',
+        text: content
+      }
+    }).then(res => {
+      console.log(res);
+    })
   }
 
   //完了したかどうかをデータベースに送る

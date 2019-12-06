@@ -4,6 +4,7 @@ import Select from 'react-select';
 import './Pomodoro.css';
 import fire from '../config';
 
+//タイマーに表示する文章を作成する
 const renderTime = value => {
     if (value === 0) {
       return <div className="timer">The session is over</div>;
@@ -35,7 +36,6 @@ export class Pomodoro extends Component {
         super(props);
         this.id = window.location.search.split('?')[1];
         this.db = fire.firestore().collection('todos').doc(this.id);
-        console.log(this.db);
         this.state = {
             duration: 25,
             isPlaying: false,
@@ -55,7 +55,7 @@ export class Pomodoro extends Component {
     }
 
     startPomodoro = () => {
-        this.setState({isPlaying:true, isDisabled:true, startButtonColor:'gray'});
+        this.setState({isPlaying:true, isDisabled:true, startButtonColor:'gray', visibility: 'hidden'});
     }
 
     onSessionEnd = () => {
@@ -63,11 +63,13 @@ export class Pomodoro extends Component {
         this.setState({visibility: 'visible'});
     }
 
+    //完了の時
     sendDone = (e) => {
         e.preventDefault();
         this.props.sendResult(this.id, true);
     }
 
+    //未完の時
     sendNotYet = (e) => {
         e.preventDefault();
         this.props.sendResult(this.id, false);
