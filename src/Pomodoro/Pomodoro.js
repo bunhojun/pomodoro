@@ -55,11 +55,25 @@ export class Pomodoro extends Component {
     }
 
     startPomodoro = () => {
-        this.setState({isPlaying:true, isDisabled:true, startButtonColor:'gray', visibility: 'hidden'});
+        // Let's check if the browser supports notifications
+        if (!("Notification" in window)) {
+            alert("This browser does not support desktop notification");
+        }
+        // Otherwise, we need to ask the user for permission
+        else if (Notification.permission !== "denied") {
+            Notification.requestPermission().then((permission) => {
+                this.setState({isPlaying:true, isDisabled:true, startButtonColor:'gray', visibility: 'hidden'});
+            });
+        }
+        
     }
 
     onSessionEnd = () => {
-        this.props.notify(this.state.content);
+        //this.props.notify(this.state.content);
+        if (Notification.permission === "granted") {
+            // If it's okay let's create a notification
+            const notification = new Notification("The session is over! Let's take a break");
+        }
         this.setState({visibility: 'visible'});
     }
 
