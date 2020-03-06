@@ -6,7 +6,8 @@
 } 
 
 body {
-  background-image: url('./img/gradation.jpg');
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #f3206d, #fed636);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Sulphur Point', sans-serif;
